@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Confirmacao de Dados</title>
+    </h:head>
+    <h:body>
+        <h:form prependId="false" rendered="#{!cadastroMB.conversation.transient}" >
+        	<h2>Os seguintes dados serao cadastrados</h2>
+            
+            <h:panelGrid columns="2" >
+            
+            	<h:outputLabel for="nome" value="Nome:" />
+                <h:outputText id="nome" value="#{cadastroMB.cliente.nome}" />
+                
+                <h:outputLabel for="cpf" value="CPF:" />
+                <h:outputText id="cpf" value="#{cadastroMB.cliente.cpf}" />
+                
+                <h:outputLabel for="email" value="Email:" />
+                <h:outputText id="email" value="#{cadastroMB.cliente.email}" />
+                
+                <h:outputLabel for="rua" value="Rua:" />
+                <h:outputText id="rua" value="#{cadastroMB.cliente.endereco.rua}" />
+                
+                <h:outputLabel for="complemento" value="Complemento:" />
+                <h:outputText id="complemento" value="#{cadastroMB.cliente.endereco.complemento}" />
+                
+                <h:outputLabel for="cep" value="CEP:" />
+                <h:outputText id="cep" value="#{cadastroMB.cliente.endereco.cep}" />
+                
+                <h:commandLink action="cadastraEndereco"  value="Voltar" />
+                <h:commandLink action="#{cadastroMB.salvar}"  value="Continuar" />
+            </h:panelGrid>
+        </h:form>
+        <h:messages />
+    </h:body>
+</html>
+

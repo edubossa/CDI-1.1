@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Cadastro de Cliente</title>
+    </h:head>
+    <h:body>
+        <h2>Endereco</h2>
+        <h:form prependId="false">
+            <h:panelGrid columns="2" >
+                
+                <h:outputLabel for="rua" value="Rua:" />
+                <h:inputText id="rua" value="#{cadastroMB.cliente.endereco.rua}" />
+                
+                <h:outputLabel for="complemento" value="Complemento:" />
+                <h:inputText id="complemento" value="#{cadastroMB.cliente.endereco.complemento}" />
+                
+                <h:outputLabel for="cep" value="CEP:" />
+                <h:inputText id="cep" value="#{cadastroMB.cliente.endereco.cep}" />
+                
+                <h:commandLink action="index"  value="Voltar" />
+                <h:commandLink action="confirmacao"  value="Continuar" /> 
+                
+            </h:panelGrid>
+        </h:form>
+        <h:messages />
+    </h:body>
+</html>
+

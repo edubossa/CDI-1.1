@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Cadastro de Cliente</title>
+    </h:head>
+    <h:body>
+        <h2>Dados Pessoais</h2>
+        <h:form prependId="false">
+            <h:panelGrid columns="2" >
+                
+                <h:outputLabel for="nome" value="Nome:" />
+                <h:inputText id="nome" value="#{cadastroMB.cliente.nome}" />
+                
+                <h:outputLabel for="cpf" value="CPF:" />
+                <h:inputText id="cpf" value="#{cadastroMB.cliente.cpf}" />
+                
+                <h:outputLabel for="email" value="Email:" />
+                <h:inputText id="email" value="#{cadastroMB.cliente.email}" />
+                
+                <h:commandLink action="#{cadastroMB.iniciar}"  value="Continuar" />
+                
+            </h:panelGrid>
+        </h:form>
+        <h:messages />
+    </h:body>
+</html>
+
